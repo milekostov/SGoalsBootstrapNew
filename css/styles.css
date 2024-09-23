@@ -1,0 +1,46 @@
+.hero {
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  align-items: center; /* Vertically centers content */
+  justify-content: center; /* Horizontally centers content */
+  position: relative; /* For the absolute positioning of the .welcome class */
+  background-image: linear-gradient(rgb(0 0 0 / 0.5), rgb(0 0 0 / 0.5)),
+    url("../images/hero-home.jpg.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white; /* Ensure text is white for visibility on dark background */
+}
+
+.welcome {
+  max-width: 80%; /* Limit width for readability */
+  padding: 2em;
+  text-align: center; /* Center the text */
+}
+
+.welcome p {
+  font-size: 1.25em;
+  line-height: 1.5;
+}
+
+.btn-red,
+.btn-danger {
+  margin-top: 1.5em; /* Adds some space above the button */
+}
+
+/* Add a media query for tablet viewports */
+@media (max-width: 1024px) and (orientation: landscape) {
+  .hero {
+    height: auto; /* Let the height adjust naturally based on content */
+    padding: 2em 0; /* Add some padding to prevent overflow */
+  }
+
+  .welcome {
+    padding: 1em; /* Reduce padding to fit content */
+  }
+
+  .btn-red,
+  .btn-danger {
+    margin-top: 1em; /* Reduce margin between buttons and other elements */
+  }
+}

@@ -52,6 +52,17 @@
   margin-right: 1rem;
 }
 
+.custom-heading {
+  font-family: "Montserrat", sans-serif; /* Modern, clean font */
+  font-weight: 700; /* Bold */
+  text-transform: uppercase; /* Make it all caps for emphasis */
+  letter-spacing: 2px; /* Add space between letters for a sleek look */
+  color: #34495e; /* Elegant dark blue */
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2); /* Adds subtle depth */
+  border-bottom: 4px solid #e74c3c; /* Underline with a bold accent color */
+  padding-bottom: 10px; /* Adds some space between text and underline */
+}
+
 @media (max-width: 768px) {
   .hero2 {
     min-height: 40vh;

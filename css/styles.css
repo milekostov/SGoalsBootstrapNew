@@ -80,6 +80,13 @@ body {
   padding-bottom: 10px; /* Adds some space between text and underline */
 }
 
+.trailer {
+  font-size: 1.5em;
+  font-family: "Montserrat", sans-serif; /* Modern, clean font */
+  font-weight: 300;
+  color: #34495e; /* Elegant dark blue */
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2); /* Adds subtle depth */
+}
 .rounded-border {
   border: 2px solid #ccc;
   border-radius: 15px;

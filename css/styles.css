@@ -68,6 +68,18 @@ body {
   justify-content: center;
   padding: 2rem;
 }
+.hero4 {
+  background-image: linear-gradient(rgb(0 0 0 / 0.5), rgb(0 0 0 / 0.5)),
+    url("../images/contact.png");
+  background-size: cover;
+  background-position: center;
+  min-height: 35vh;
+  max-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
 
 .custom-heading {
   font-family: "Montserrat", sans-serif; /* Modern, clean font */
@@ -99,6 +111,21 @@ body {
   background-color: #f0f0f0;
   padding: 10px;
   margin-top: 10px;
+}
+
+.icon-container {
+  width: 150px; /* Fixed width for uniformity */
+  height: 150px; /* Fixed height for uniformity */
+  display: flex; /* Flexbox for centering */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  overflow: hidden; /* Hide overflow */
+}
+
+.icon-container img {
+  width: 100%; /* Scale to fit container width */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: contain; /* Contain within the div */
 }
 @media (max-width: 768px) {
   .hero2 {

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="eng">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wheel Of Life</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="wheelcss/style.css" />
+    <link rel="stylesheet" href="wheelcss/inputRangeStyle.css" />
+  </head>
+
+  <body>
+    <nav class="position-relative">
+      <a href="index.html" class="position-absolute top-1 start-1 m-2">
+        <img
+          src="images/logoMK.png"
+          alt="Smooth goals logo"
+          class="img-fluid"
+          style="width: 20vw; max-width: 120px; min-width: 48px; height: auto"
+        />
+      </a>
+    </nav>
+
+    <div id="container">
+      <div id="chart"></div>
+      <div id="categories"></div>
+      <section id="final">
+        <h2>Tips</h2>
+        <p>
+          To fulfill your goal, stay focused on one thing, but not one thing in
+          only one area of life. For a better life, pay attention to all areas.
+        </p>
+        <p>
+          This drill will give you a view of your life so you see which areas
+          need the most change.
+        </p>
+      </section>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="wheeljs/wheelOfLife.js"></script>
+    <script>
+      const defaultConfig = [
+        {
+          name: "Finance",
+          color: "#3DB549",
+          description:
+            "How are you satisfied with your current financial situation? Rate it from 0 to 10",
+        },
+        {
+          name: "Personal Growth",
+          color: "#2289B4",
+          description:
+            "How are you satisfied with your personal growth? Rate it from 0 to 10",
+        },
+        {
+          name: "Health",
+          color: "#F79321",
+          description:
+            "How are you satisfied with your current health condition? Rate it from 0 to 10",
+        },
+        {
+          name: "Family",
+          color: "#94AFDC",
+          description:
+            "How are you satisfied with your current family relations? Rate it from 0 to 10",
+        },
+        {
+          name: "Relationships",
+          color: "#FF5F75",
+          description:
+            "How are you satisfied with your current relationships? Rate it from 0 to 10",
+        },
+        {
+          name: "Social Life",
+          color: "#00ADEF",
+          description:
+            "How are you satisfied with your current social life? Rate it from 0 to 10",
+        },
+        {
+          name: "Fun",
+          color: "#935FA7",
+          description: "Are you having fun? Rate it from 0 to 10",
+        },
+        {
+          name: "Career",
+          color: "#ED2527",
+          description: "How is your career going? Rate it from 0 to 10",
+        },
+      ];
+      WheelOfLife.setup(
+        document.getElementById("chart"),
+        document.getElementById("categories"),
+        defaultConfig
+      );
+    </script>
+  </body>
+</html>

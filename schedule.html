@@ -1,0 +1,547 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Book a free 30-minute coaching call with Michael K. Pick a date and time that works for you." />
+    <title>Book a Free Call | Smooth Goals</title>
+
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png" />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <style>
+      /* ===== SCHEDULE PAGE ===== */
+      .sg-sched-wrap {
+        max-width: 720px;
+        margin: 0 auto;
+        padding: 2rem 1rem 4rem;
+      }
+      .sg-sched-header {
+        text-align: center;
+        margin-bottom: 2.5rem;
+      }
+      .sg-sched-header h1 {
+        font-size: 2rem;
+        font-weight: 800;
+        color: #fff;
+        margin-bottom: .5rem;
+      }
+      .sg-sched-header p {
+        color: #9c958a;
+        font-size: 1rem;
+      }
+
+      /* calendar grid */
+      .sg-cal {
+        background: #232019;
+        border-radius: 12px;
+        border-top: 3px solid var(--sg-gold);
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+      }
+      .sg-cal-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1rem;
+      }
+      .sg-cal-nav button {
+        background: none;
+        border: 1px solid #444;
+        color: #fff;
+        border-radius: 6px;
+        padding: .4rem .8rem;
+        font-size: .85rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: border-color .2s;
+      }
+      .sg-cal-nav button:hover { border-color: var(--sg-gold); color: var(--sg-gold); }
+      .sg-cal-month {
+        color: #fff;
+        font-weight: 700;
+        font-size: 1.05rem;
+      }
+      .sg-cal-grid {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        gap: 6px;
+        text-align: center;
+      }
+      .sg-cal-dow {
+        color: var(--sg-gold);
+        font-size: .7rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        padding: .3rem 0;
+      }
+      .sg-cal-day {
+        background: transparent;
+        border: 1px solid #333;
+        color: #888;
+        border-radius: 6px;
+        padding: .55rem .2rem;
+        font-size: .85rem;
+        font-weight: 600;
+        cursor: default;
+        transition: all .15s;
+      }
+      .sg-cal-day.empty { border: none; }
+      .sg-cal-day.available {
+        color: #fff;
+        border-color: #555;
+        cursor: pointer;
+      }
+      .sg-cal-day.available:hover {
+        border-color: var(--sg-gold);
+        background: rgba(201,162,39,.1);
+      }
+      .sg-cal-day.selected {
+        background: var(--sg-accent);
+        border-color: var(--sg-accent);
+        color: #fff;
+      }
+      .sg-cal-day.past { color: #444; border-color: #2a2a2a; }
+
+      /* time slots */
+      .sg-times {
+        background: #232019;
+        border-radius: 12px;
+        border-top: 3px solid var(--sg-gold);
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+        display: none;
+      }
+      .sg-times h3 {
+        color: #fff;
+        font-size: 1rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+      }
+      .sg-times-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+        gap: 8px;
+      }
+      .sg-time-btn {
+        background: transparent;
+        border: 1px solid #555;
+        color: #ccc;
+        border-radius: 6px;
+        padding: .6rem .4rem;
+        font-size: .85rem;
+        font-weight: 600;
+        font-family: inherit;
+        cursor: pointer;
+        transition: all .15s;
+      }
+      .sg-time-btn:hover {
+        border-color: var(--sg-gold);
+        color: #fff;
+        background: rgba(201,162,39,.08);
+      }
+      .sg-time-btn.selected {
+        background: var(--sg-accent);
+        border-color: var(--sg-accent);
+        color: #fff;
+      }
+
+      /* booking form */
+      .sg-book-form {
+        background: #232019;
+        border-radius: 12px;
+        border-top: 3px solid var(--sg-gold);
+        padding: 1.8rem 1.5rem;
+        display: none;
+      }
+      .sg-book-form h3 {
+        color: #fff;
+        font-size: 1rem;
+        font-weight: 700;
+        margin-bottom: .3rem;
+      }
+      .sg-book-form .sg-chosen {
+        color: var(--sg-gold);
+        font-size: .85rem;
+        font-weight: 600;
+        margin-bottom: 1.2rem;
+      }
+      .sg-book-form label {
+        display: block;
+        color: #9c958a;
+        font-size: .75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: .4rem;
+      }
+      .sg-book-form input,
+      .sg-book-form textarea {
+        width: 100%;
+        background: #1c1a18;
+        border: 1px solid #444;
+        color: #fff;
+        border-radius: 6px;
+        padding: .7rem .9rem;
+        font-size: .9rem;
+        font-family: inherit;
+        margin-bottom: 1rem;
+        transition: border-color .2s;
+      }
+      .sg-book-form input:focus,
+      .sg-book-form textarea:focus {
+        outline: none;
+        border-color: var(--sg-gold);
+      }
+      .sg-book-form textarea { resize: vertical; min-height: 80px; }
+      .sg-book-form .btn-sg-accent { width: 100%; padding: .85rem; font-size: .95rem; }
+
+      /* confirmation */
+      .sg-confirm {
+        background: #232019;
+        border-radius: 12px;
+        border-top: 3px solid var(--sg-gold);
+        padding: 2.5rem 1.5rem;
+        text-align: center;
+        display: none;
+      }
+      .sg-confirm .sg-check {
+        width: 56px;
+        height: 56px;
+        background: var(--sg-accent);
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1rem;
+      }
+      .sg-confirm h2 { color: #fff; font-size: 1.4rem; font-weight: 700; margin-bottom: .5rem; }
+      .sg-confirm p { color: #9c958a; font-size: .95rem; line-height: 1.6; }
+      .sg-confirm .sg-detail { color: var(--sg-gold); font-weight: 600; }
+
+      .sg-notice {
+        background: rgba(192,57,43,.15);
+        color: #e74c3c;
+        border-radius: 8px;
+        padding: .7rem 1rem;
+        font-size: .85rem;
+        margin-bottom: 1rem;
+        display: none;
+      }
+
+      @media (max-width: 500px) {
+        .sg-cal { padding: 1rem; }
+        .sg-cal-day { padding: .4rem .1rem; font-size: .78rem; }
+        .sg-times-grid { grid-template-columns: repeat(3, 1fr); }
+      }
+    </style>
+  </head>
+
+  <body style="background: var(--sg-black);">
+    <!-- ============ NAVIGATION ============ -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top sg-nav">
+      <div class="container">
+        <a class="navbar-brand sg-brand" href="index.html">Smooth <span>Goals</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarMain">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="book.html">Books</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">Coaching</a></li>
+            <li class="nav-item"><a class="nav-link" href="free.html">Free Course</a></li>
+            <li class="nav-item"><a class="nav-link" href="/guides/">Guides</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            <li class="nav-item ms-lg-3">
+              <a class="btn btn-sg-accent btn-sm px-3" href="schedule.html">Book a Free Call</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="sg-sched-wrap">
+      <div class="sg-sched-header">
+        <p class="sg-label">Free · 30 minutes</p>
+        <h1>Book Your Free Coaching Call</h1>
+        <p>Pick a date and time. Walk away with a clear plan for your next 90 days.</p>
+      </div>
+
+      <!-- Calendar -->
+      <div class="sg-cal" id="sg-cal">
+        <div class="sg-cal-nav">
+          <button id="cal-prev">&larr; Prev</button>
+          <span class="sg-cal-month" id="cal-month"></span>
+          <button id="cal-next">Next &rarr;</button>
+        </div>
+        <div class="sg-cal-grid" id="cal-grid"></div>
+      </div>
+
+      <!-- Time slots -->
+      <div class="sg-times" id="sg-times">
+        <h3 id="times-title">Select a time</h3>
+        <div class="sg-times-grid" id="times-grid"></div>
+      </div>
+
+      <!-- Booking form -->
+      <div class="sg-book-form" id="sg-form">
+        <h3>Almost there — confirm your details</h3>
+        <p class="sg-chosen" id="chosen-dt"></p>
+        <div class="sg-notice" id="form-error"></div>
+
+        <input type="hidden" id="hp-field" name="website" value="" />
+
+        <label for="b-name">Your name</label>
+        <input type="text" id="b-name" placeholder="Jane Doe" required autocomplete="name" />
+
+        <label for="b-email">Email address</label>
+        <input type="email" id="b-email" placeholder="jane@example.com" required autocomplete="email" />
+
+        <label for="b-note">What's your biggest goal right now? (optional)</label>
+        <textarea id="b-note" placeholder="Tell me a bit about where you are and where you want to go..."></textarea>
+
+        <button type="button" class="btn btn-sg-accent" id="btn-book">Confirm booking</button>
+      </div>
+
+      <!-- Confirmation -->
+      <div class="sg-confirm" id="sg-confirm">
+        <div class="sg-check">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg>
+        </div>
+        <h2>You're booked!</h2>
+        <p>A confirmation email is on its way to <span class="sg-detail" id="conf-email"></span>.</p>
+        <p><span class="sg-detail" id="conf-dt"></span></p>
+        <p style="margin-top:1.5rem;"><a href="index.html" class="btn btn-sg-accent">Back to Smooth Goals</a></p>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="sg-footer text-center">
+      <div class="container">
+        <a class="sg-footer-brand" href="index.html">Smooth <span>Goals</span></a>
+        <p class="sg-footer-copy">&copy; 2026 Smooth Goals &middot; Michael K. &middot; All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <script>
+    (function () {
+      // ── CONFIG: available days & time slots ──
+      // 0=Sun,1=Mon...6=Sat — set which weekdays are bookable
+      var AVAILABLE_DAYS = [1, 2, 3, 4, 5]; // Mon–Fri
+      // Time slots offered (24h format)
+      var TIME_SLOTS = [
+        "09:00","09:30","10:00","10:30","11:00","11:30",
+        "14:00","14:30","15:00","15:30","16:00","16:30"
+      ];
+      var MONTHS = ["January","February","March","April","May","June",
+                    "July","August","September","October","November","December"];
+      var DOWS = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+
+      var today = new Date();
+      today.setHours(0,0,0,0);
+      var curYear = today.getFullYear();
+      var curMonth = today.getMonth();
+      var selectedDate = null;
+      var selectedTime = null;
+
+      var $grid = document.getElementById("cal-grid");
+      var $month = document.getElementById("cal-month");
+      var $times = document.getElementById("sg-times");
+      var $timesGrid = document.getElementById("times-grid");
+      var $timesTitle = document.getElementById("times-title");
+      var $form = document.getElementById("sg-form");
+      var $chosen = document.getElementById("chosen-dt");
+      var $confirm = document.getElementById("sg-confirm");
+      var $cal = document.getElementById("sg-cal");
+      var $error = document.getElementById("form-error");
+
+      function renderCal() {
+        $grid.innerHTML = "";
+        $month.textContent = MONTHS[curMonth] + " " + curYear;
+
+        // day-of-week headers
+        for (var d = 0; d < 7; d++) {
+          var dw = document.createElement("div");
+          dw.className = "sg-cal-dow";
+          dw.textContent = DOWS[d];
+          $grid.appendChild(dw);
+        }
+
+        var first = new Date(curYear, curMonth, 1);
+        var startDay = first.getDay();
+        var daysInMonth = new Date(curYear, curMonth + 1, 0).getDate();
+
+        // empty cells before 1st
+        for (var e = 0; e < startDay; e++) {
+          var em = document.createElement("div");
+          em.className = "sg-cal-day empty";
+          $grid.appendChild(em);
+        }
+
+        for (var i = 1; i <= daysInMonth; i++) {
+          var cell = document.createElement("button");
+          cell.className = "sg-cal-day";
+          cell.textContent = i;
+          var dt = new Date(curYear, curMonth, i);
+          var isPast = dt < today;
+          var isAvail = !isPast && AVAILABLE_DAYS.indexOf(dt.getDay()) !== -1;
+
+          if (isPast) cell.classList.add("past");
+          else if (isAvail) cell.classList.add("available");
+
+          if (selectedDate && dt.getTime() === selectedDate.getTime()) {
+            cell.classList.add("selected");
+          }
+
+          if (isAvail) {
+            cell.setAttribute("data-date", dt.toISOString().split("T")[0]);
+            cell.addEventListener("click", pickDate);
+          }
+          $grid.appendChild(cell);
+        }
+      }
+
+      function pickDate(e) {
+        var ds = e.target.getAttribute("data-date");
+        selectedDate = new Date(ds + "T00:00:00");
+        selectedTime = null;
+        renderCal();
+        showTimes();
+        $form.style.display = "none";
+      }
+
+      function showTimes() {
+        $times.style.display = "block";
+        var parts = selectedDate.toISOString().split("T")[0].split("-");
+        $timesTitle.textContent = "Available times — " +
+          DOWS[selectedDate.getDay()] + ", " +
+          MONTHS[selectedDate.getMonth()] + " " + selectedDate.getDate();
+        $timesGrid.innerHTML = "";
+
+        TIME_SLOTS.forEach(function (t) {
+          var btn = document.createElement("button");
+          btn.className = "sg-time-btn";
+          // format for display
+          var h = parseInt(t.split(":")[0], 10);
+          var m = t.split(":")[1];
+          var ampm = h >= 12 ? "PM" : "AM";
+          var h12 = h > 12 ? h - 12 : (h === 0 ? 12 : h);
+          btn.textContent = h12 + ":" + m + " " + ampm;
+          btn.setAttribute("data-time", t);
+          if (selectedTime === t) btn.classList.add("selected");
+          btn.addEventListener("click", pickTime);
+          $timesGrid.appendChild(btn);
+        });
+      }
+
+      function pickTime(e) {
+        selectedTime = e.target.getAttribute("data-time");
+        // re-highlight
+        var btns = $timesGrid.querySelectorAll(".sg-time-btn");
+        for (var i = 0; i < btns.length; i++) btns[i].classList.remove("selected");
+        e.target.classList.add("selected");
+        showForm();
+      }
+
+      function showForm() {
+        $form.style.display = "block";
+        var h = parseInt(selectedTime.split(":")[0], 10);
+        var m = selectedTime.split(":")[1];
+        var ampm = h >= 12 ? "PM" : "AM";
+        var h12 = h > 12 ? h - 12 : (h === 0 ? 12 : h);
+        $chosen.textContent =
+          DOWS[selectedDate.getDay()] + ", " +
+          MONTHS[selectedDate.getMonth()] + " " + selectedDate.getDate() +
+          ", " + curYear + " at " + h12 + ":" + m + " " + ampm;
+        $error.style.display = "none";
+      }
+
+      // nav
+      document.getElementById("cal-prev").addEventListener("click", function () {
+        if (curYear === today.getFullYear() && curMonth <= today.getMonth()) return;
+        curMonth--;
+        if (curMonth < 0) { curMonth = 11; curYear--; }
+        renderCal();
+      });
+      document.getElementById("cal-next").addEventListener("click", function () {
+        var maxMonth = today.getMonth() + 2;
+        var maxYear = today.getFullYear();
+        if (maxMonth > 11) { maxMonth -= 12; maxYear++; }
+        if (curYear > maxYear || (curYear === maxYear && curMonth >= maxMonth)) return;
+        curMonth++;
+        if (curMonth > 11) { curMonth = 0; curYear++; }
+        renderCal();
+      });
+
+      // submit
+      document.getElementById("btn-book").addEventListener("click", function () {
+        var name = document.getElementById("b-name").value.trim();
+        var email = document.getElementById("b-email").value.trim();
+        var note = document.getElementById("b-note").value.trim();
+        var hp = document.getElementById("hp-field").value;
+
+        if (hp) return; // honeypot
+
+        if (!name || !email) {
+          $error.textContent = "Please fill in your name and email.";
+          $error.style.display = "block";
+          return;
+        }
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+          $error.textContent = "Please enter a valid email address.";
+          $error.style.display = "block";
+          return;
+        }
+
+        var btn = document.getElementById("btn-book");
+        btn.disabled = true;
+        btn.textContent = "Booking...";
+
+        var body = new FormData();
+        body.append("name", name);
+        body.append("email", email);
+        body.append("date", selectedDate.toISOString().split("T")[0]);
+        body.append("time", selectedTime);
+        body.append("note", note);
+        body.append("website", hp);
+
+        fetch("book-appointment.php", { method: "POST", body: body })
+          .then(function (r) { return r.json(); })
+          .then(function (data) {
+            if (data.ok) {
+              $cal.style.display = "none";
+              $times.style.display = "none";
+              $form.style.display = "none";
+              $confirm.style.display = "block";
+              document.getElementById("conf-email").textContent = email;
+              document.getElementById("conf-dt").textContent = $chosen.textContent;
+            } else {
+              $error.textContent = data.error || "Something went wrong. Please try again.";
+              $error.style.display = "block";
+              btn.disabled = false;
+              btn.textContent = "Confirm booking";
+            }
+          })
+          .catch(function () {
+            $error.textContent = "Network error. Please try again.";
+            $error.style.display = "block";
+            btn.disabled = false;
+            btn.textContent = "Confirm booking";
+          });
+      });
+
+      renderCal();
+    })();
+    </script>
+  </body>
+</html>

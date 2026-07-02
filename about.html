@@ -1,6 +1,6 @@
-<!--Mile Kostov, 16 September 2024-->
+<!--Smooth Goals — Coaching Packages | Redesigned 2026 | Black/Red/Gold-->
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <!-- Essential Meta Tags -->
@@ -14,9 +14,9 @@
       name="keywords"
       content="goal coaching, success coaching, personal development, goal management system, productivity coaching, achieve goals, life coach, goal setting program"
     />
-    <meta name="author" content="Smooth Goals" />
+    <meta name="author" content="Michael K." />
 
-    <!-- Open Graph Meta Tags -->
+    <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://smoothgoals.com/about.html" />
     <meta property="og:title" content="Coaching Packages | Smooth Goals" />
@@ -33,7 +33,7 @@
       content="Smooth Goals Coaching Packages — Personal Development and Goal Management"
     />
 
-    <!-- Twitter Card Meta Tags -->
+    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Smooth Goals Coaching Packages" />
     <meta
@@ -44,6 +44,9 @@
       name="twitter:image"
       content="https://smoothgoals.com/images/packagesSmoothGoals.jpg"
     />
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://smoothgoals.com/about.html" />
 
     <!-- Favicon and Icons -->
     <link rel="shortcut icon" href="images/favicon.ico" />
@@ -60,6 +63,17 @@
     />
     <link rel="icon" sizes="192x192" href="images/android-chrome-192x192.png" />
 
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Google Fonts - Montserrat -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
     <!-- Bootstrap CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
@@ -72,336 +86,607 @@
     <link rel="stylesheet" href="css/styles.css" />
 
     <!-- Page Title -->
-    <title>Coaching Packages | Smooth Goals</title>
+    <title>Goal Coaching for Entrepreneurs | Smooth Goals</title>
 
-    <!-- jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <!-- Structured Data for SEO (JSON-LD) -->
+    <!-- Structured Data (JSON-LD) -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "Organization",
         "name": "Smooth Goals",
         "url": "https://smoothgoals.com",
-        "logo": "https://smoothgoals.com/images/favicon-192x192.png",
+        "logo": "https://smoothgoals.com/images/logoMK.png",
         "sameAs": [
-          "https://www.facebook.com/smoothgoals",
-          "https://www.instagram.com/smoothgoals",
-          "https://www.linkedin.com/company/smooth-goals",
-          "https://www.youtube.com/@smoothgoals"
+          "https://www.facebook.com/profile.php?id=61557992752582",
+          "https://www.instagram.com/smooth_goals/",
+          "https://www.linkedin.com/company/smooth-goals"
         ],
         "founder": {
           "@type": "Person",
-          "name": "Mile Kostov",
-          "jobTitle": "Founder & Goal Achievement Coach"
+          "name": "Michael K.",
+          "jobTitle": "Entrepreneur & Goal Achievement Coach"
         },
-        "description": "Smooth Goals is a goal management and personal development platform offering coaching, free resources, and success tools to help people set, plan, and achieve their goals efficiently.",
+        "description": "Smooth Goals is a goal management and personal development platform offering coaching, free resources, and success tools to help people set, plan, and achieve their goals using the Smooth Goals System.",
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "Skopje",
           "addressCountry": "North Macedonia"
-        },
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "contactType": "Customer Support",
-          "email": "info@smoothgoals.com",
-          "url": "https://smoothgoals.com/contact.html"
         }
       }
     </script>
   </head>
 
   <body>
-    <!--Bootstrap nav bar-->
-    <nav class="navbar navbar-expand-sm navbar-dark sticky-top bg-dark">
-      <a class="navbar-brand" href="index.html">Road to Success</a>
+    <!-- ============ NAVIGATION ============ -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top sg-nav">
+      <div class="container">
+        <a class="navbar-brand sg-brand" href="index.html"
+          >Smooth <span>Goals</span></a
+        >
 
-      <!--Hamburger menu icon-->
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarResponsive"
-        aria-controls="navbarResponsive"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarMain"
+          aria-controls="navbarMain"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-      <!--Navbar links-->
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="book.html">Success Books</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="about.html">Packages</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="free.html">Free Stuff</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="indexWheel.html">Wheel of Life</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact</a>
-          </li>
-        </ul>
+        <div class="collapse navbar-collapse" id="navbarMain">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="book.html">Books</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="about.html"
+                >Coaching</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="free.html">Free Course</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/guides/">Guides</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item ms-lg-3">
+              <a class="btn btn-sg-accent btn-sm px-3" href="schedule.html"
+                >Book a Free Call</a
+              >
+            </li>
+          </ul>
+        </div>
       </div>
     </nav>
 
-    <!-- Header and Hero Image -->
-    <header class="bg-dark text-white text-center py-5 hero3">
-      <div class="container welcome2">
-        <img
-          src="images/logoMK.png"
-          alt="Logo of Smooth Goals, the best goal achievement system on the Planet"
-          class="float-start me-3 img-fluid"
-        />
-
-        <h1>BE A WINNER!</h1>
-        <h2>Check our success coaching</h2>
+    <!-- ============ PAGE HERO ============ -->
+    <header class="sg-page-hero">
+      <div class="sg-page-hero-bg" aria-hidden="true"></div>
+      <div class="sg-page-hero-scrim"></div>
+      <div class="container sg-page-hero-content text-center">
+        <p class="sg-eyebrow" style="animation: none; opacity: 1">Coaching</p>
+        <h1 class="sg-page-hero-title">Coaching built to get you results</h1>
+        <p class="sg-page-hero-sub">
+          Personal guidance through the Smooth Goals System — from a focused
+          reset to full transformation.
+        </p>
       </div>
     </header>
 
-    <!--Main content area-->
-    <main class="container-fluid mt-5 pb-5">
-      <!-- Cards Section -->
-      <div class="container my-5">
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
-          <!-- Card 1 -->
-          <div class="col">
-            <div class="card h-100 d-flex flex-column">
-              <a
-                href="mailto:smoothgoals@gmail.com?subject=Basic%20Package%20Interest&body=More%20info%20about%20basic%20package."
-                style="display: block"
-              >
-                <img
-                  src="images/basic.png"
-                  class="card-img-top"
-                  alt="Basic package of the Smooth Goals, goal management system"
-                />
-              </a>
-              <div class="card-body d-flex flex-column">
-                <h5 class="card-title">Basic Package only $199</h5>
-                <p class="card-text">
-                  A groundbreaking approach tailored to empower you to conquer
-                  even the loftiest of aspirations, sculpting the life you've
-                  always dreamt of with unparalleled precision.
-                </p>
-                <ul>
-                  <li>Two-day training</li>
-                  <li>1-hour consultation</li>
-                  <li>Free Goals Manual</li>
-                </ul>
+    <!-- ============ PRICING CARDS ============ -->
+    <main>
+      <section class="sg-section sg-section-darker" style="padding-top: 1.5rem">
+        <div class="container">
+          <p class="sg-label text-center">Choose your path</p>
+          <h2 class="sg-section-title sg-text-light text-center">
+            Three tiers, one system
+          </h2>
+          <p class="sg-section-text sg-text-muted text-center">
+            Every package is built on the Smooth Goals System. Pick the depth
+            that fits your goals.
+          </p>
 
-                <a
-                  href="mailto:smoothgoals@gmail.com?subject=Basic%20Package%20Interest&body=More%20info%20about%20basic%20package."
-                  class="btn btn-danger mt-auto"
+          <div class="row justify-content-center g-4 mt-3 align-items-end">
+            <!-- Basic -->
+            <div class="col-md-4">
+              <div class="sg-price-card h-100">
+                <h3 class="sg-price-name">Basic</h3>
+                <p class="sg-price-tagline">
+                  For the self-starter who just needs the system.
+                </p>
+                <p class="sg-price-bestfor">
+                  Best for: First-time goal-setters
+                </p>
+                <div class="sg-price-amount-wrap">
+                  <span class="sg-price-amount">$199</span>
+                  <span class="sg-price-context">one-time</span>
+                </div>
+                <hr class="sg-price-divider" />
+                <ul class="sg-price-features">
+                  <li>
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M20 6 9 17l-5-5" />
+                    </svg>
+                    Two-day training
+                  </li>
+                  <li>
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M20 6 9 17l-5-5" />
+                    </svg>
+                    1-hour consultation
+                  </li>
+                  <li>
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M20 6 9 17l-5-5" />
+                    </svg>
+                    Free Goals Manual
+                  </li>
+                </ul>
+                <a href="schedule.html" class="btn btn-sg-outline w-100"
+                  >Book a free call</a
                 >
-                  Click for more info
-                </a>
+                <p class="sg-price-micro">
+                  Starts with a free 30-min call — no commitment.
+                </p>
               </div>
             </div>
-          </div>
-          <!-- Card 2 -->
-          <div class="col">
-            <div class="card h-100 d-flex flex-column">
-              <a
-                href="mailto:smoothgoals@gmail.com?subject=Optimal%20Package%20Interest&body=More%20info%20about%20optimal%20package."
-                style="display: block"
-              >
-                <img
-                  src="images/optimal.png"
-                  class="card-img-top"
-                  alt="Basic package of the Smooth Goals, goal management system"
-                />
-              </a>
-              <div class="card-body d-flex flex-column">
-                <h5 class="card-title">Optimal Follow Up $399</h5>
-                <p class="card-text">
-                  Workshop supported by optimal follow-up consultations to
-                  ensure your best exercise of the methods and will dramatically
-                  increase your success chances.
-                </p>
-                <ul>
-                  <li>Two-day training</li>
-                  <li>Five additional consultation sessions</li>
-                  <li>Free Goals Manual</li>
-                </ul>
 
-                <a
-                  href="mailto:smoothgoals@gmail.com?subject=Optimal%20Package%20Interest&body=More%20info%20about%20optimal%20package."
-                  class="btn btn-danger mt-auto"
+            <!-- Optimal (featured) -->
+            <div class="col-md-4">
+              <div class="sg-price-card sg-price-featured h-100">
+                <span class="sg-popular-pill">Most Popular</span>
+                <h3 class="sg-price-name">Optimal</h3>
+                <p class="sg-price-tagline">
+                  For those who want it to actually stick.
+                </p>
+                <p class="sg-price-bestfor">Best for: Busy entrepreneurs</p>
+                <div class="sg-price-amount-wrap">
+                  <span class="sg-price-amount">$399</span>
+                  <span class="sg-price-context">5 follow-ups</span>
+                </div>
+                <hr class="sg-price-divider" />
+                <ul class="sg-price-features">
+                  <li>
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M20 6 9 17l-5-5" />
+                    </svg>
+                    Two-day training
+                  </li>
+                  <li>
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M20 6 9 17l-5-5" />
+                    </svg>
+                    Five follow-up sessions
+                  </li>
+                  <li>
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M20 6 9 17l-5-5" />
+                    </svg>
+                    Free Goals Manual
+                  </li>
+                </ul>
+                <a href="schedule.html" class="btn btn-sg-accent w-100"
+                  >Book a free call</a
                 >
-                  Click for more info
-                </a>
+                <p class="sg-price-micro">
+                  Free call first. You only pay after your first session.
+                </p>
               </div>
             </div>
-          </div>
-          <!-- Card 3 -->
-          <div class="col">
-            <div class="card h-100 d-flex flex-column">
-              <a
-                href="mailto:smoothgoals@gmail.com?subject=Premium%20Package%20Interest&body=More%20info%20about%20premium%20package."
-                style="display: block"
-              >
-                <img
-                  src="images/premium.png"
-                  class="card-img-top"
-                  alt="Basic package of the Smooth Goals, goal management system"
-                />
-              </a>
-              <div class="card-body d-flex flex-column">
-                <h5 class="card-title">Individual Coaching $999</h5>
-                <p class="card-text">
-                  Imagine you were a mighty wizard and make your wishes come
-                  true with a single wave of your magic wand. Now, imagine
-                  SMOOTH GOALS!
-                </p>
-                <ul>
-                  <li>12 sessions of training once a week</li>
-                  <li>Personalized Program</li>
-                  <li>Consistent Support and Motivation</li>
-                </ul>
 
-                <a
-                  href="mailto:smoothgoals@gmail.com?subject=Premium%20Package%20Interest&body=More%20info%20about%20premium%20package."
-                  class="btn btn-danger mt-auto"
+            <!-- Individual Coaching -->
+            <div class="col-md-4">
+              <div class="sg-price-card h-100">
+                <h3 class="sg-price-name">Individual Coaching</h3>
+                <p class="sg-price-tagline">
+                  For serious players who want a partner.
+                </p>
+                <p class="sg-price-bestfor">Best for: High-stakes goals</p>
+                <div class="sg-price-amount-wrap">
+                  <span class="sg-price-amount">$999</span>
+                  <span class="sg-price-context">12 weeks</span>
+                </div>
+                <hr class="sg-price-divider" />
+                <ul class="sg-price-features">
+                  <li>
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M20 6 9 17l-5-5" />
+                    </svg>
+                    12 weekly sessions
+                  </li>
+                  <li>
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M20 6 9 17l-5-5" />
+                    </svg>
+                    Personalized program
+                  </li>
+                  <li>
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M20 6 9 17l-5-5" />
+                    </svg>
+                    Ongoing support &amp; accountability
+                  </li>
+                </ul>
+                <a href="schedule.html" class="btn btn-sg-outline w-100"
+                  >Book a free call</a
                 >
-                  Click for more info
-                </a>
-              </div>
-            </div>
-          </div>
-          <!-- Card 4 -->
-          <div class="col">
-            <div class="card h-100 d-flex flex-column">
-              <a href="https://a.co/d/1OPdV5N" style="display: block">
-                <img
-                  src="images/book1.jpg"
-                  class="card-img-top"
-                  alt="Basic package of the Smooth Goals, goal management system"
-                />
-              </a>
-              <div class="card-body d-flex flex-column">
-                <h5 class="card-title">Goals Manual only $5.99</h5>
-                <p class="card-text">
-                  Discover the ultimate guide to achieving a state of power
-                  where no external force can prevent you from succeeding.
+                <p class="sg-price-micro">
+                  Free call first. You only pay after your first session.
                 </p>
-                <ul>
-                  <li>Set clear and achievable goals</li>
-                  <li>Overcome setbacks and failures</li>
-                  <li>Cultivate resilience and mental clarity</li>
-                  <li>Invest in yourself for success</li>
-                </ul>
-
-                <a href="https://a.co/d/1OPdV5N" class="btn btn-danger mt-auto">
-                  Click to buy the Manual
-                </a>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div class="col-sm-12 rounded-border">
-        <h1 class="text-center">Common Results</h1>
-        <p>
-          If you use the system the best you can, you can achieve your goals in
-          3 months to 2 years - practitioners' average time of goal
-          accomplishment.
+      <!-- ============ COMMON RESULTS ============ -->
+      <section class="sg-section sg-section-cream">
+        <div class="container">
+          <p class="sg-label text-center">What to expect</p>
+          <h2 class="sg-section-title text-center">Common Results</h2>
+          <p class="sg-section-text text-center">
+            Here's where the system tends to make the biggest difference.
+          </p>
+
+          <div class="row g-4 mt-2">
+            <div class="col-md-4">
+              <h3 class="sg-result-title">Financial &amp; Career</h3>
+              <p class="sg-result-text">
+                The system turns vague ambitions into concrete financial
+                milestones — with a clear plan to hit them. Most clients focus
+                here first.
+              </p>
+            </div>
+            <div class="col-md-4">
+              <h3 class="sg-result-title">Love &amp; Relationships</h3>
+              <p class="sg-result-text">
+                The same clarity that sharpens your career goals applies to your
+                relationships — better communication, and the confidence to
+                build the life you want with the people you love.
+              </p>
+            </div>
+            <div class="col-md-4">
+              <h3 class="sg-result-title">Fitness &amp; Health</h3>
+              <p class="sg-result-text">
+                The discipline that drives career goals drives physical ones too
+                — a structure for building habits that hold long after the
+                program ends.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ TESTIMONIALS ============ -->
+      <section class="sg-section sg-section-light">
+        <div class="container">
+          <p class="sg-label sg-label-gold text-center">What clients say</p>
+          <h2 class="sg-section-title text-center">Results in their words</h2>
+          <p class="sg-section-text text-center">
+            Real people who ran the system and built the thing they wrote down.
+          </p>
+
+          <!-- Featured testimonial — Tale (commented out pending his confirmation) -->
+          <!--
+          <div class="row align-items-center g-4 g-lg-5 mt-2">
+            <div class="col-lg-6">
+              <figure class="sg-figure sg-tm-figure">
+                <img
+                  src="images/tale_featured.jpg"
+                  alt="Tale on a beach in Barcelona with the city skyline behind him"
+                  loading="lazy"
+                  width="900"
+                  height="600"
+                />
+              </figure>
+            </div>
+            <div class="col-lg-6">
+              <blockquote class="sg-tm-quote">
+                <p>
+                  "A year ago, living by the sea was just a line in my notebook.
+                  An ideal scene I wasn't sure I believed in. Then I was
+                  standing on a beach in Barcelona, and I realized I'd actually
+                  built the thing I wrote down. That's what the system does. It
+                  makes the goal feel inevitable instead of impossible."
+                </p>
+                <footer class="sg-tm-attr">
+                  Tale, <span>NLP Master</span>
+                </footer>
+              </blockquote>
+            </div>
+          </div>
+          -->
+
+          <!-- Three-up avatar row -->
+          <div class="row g-4 mt-4">
+            <div class="col-md-4">
+              <div class="sg-tm-card">
+                <img
+                  src="images/maria_avatar.jpg"
+                  alt="Maria, founder of MM International"
+                  class="sg-tm-avatar"
+                  loading="lazy"
+                  width="80"
+                  height="80"
+                />
+                <blockquote class="sg-tm-mini">
+                  <p>
+                    "We took MM International from zero to three million dollars
+                    in two years. Maybe I got lucky, maybe the system just
+                    worked, but I had the structure to execute, and that's the
+                    part most people are missing."
+                  </p>
+                  <footer class="sg-tm-attr">
+                    Maria, <span>Founder, MM International</span>
+                  </footer>
+                </blockquote>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="sg-tm-card">
+                <img
+                  src="images/maya_avatar.jpg"
+                  alt="Maya, Director of Sales at Grawe"
+                  class="sg-tm-avatar"
+                  loading="lazy"
+                  width="80"
+                  height="80"
+                />
+                <blockquote class="sg-tm-mini">
+                  <p>
+                    "I started as an agent. With the system I moved up to
+                    General Manager, and now I'm Director of Sales at a much
+                    larger brand. Every step had a plan behind it, and the plan
+                    kept working."
+                  </p>
+                  <footer class="sg-tm-attr">
+                    Maya, <span>Director of Sales, Grawe</span>
+                  </footer>
+                </blockquote>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="sg-tm-card">
+                <img
+                  src="images/nadica_avatar.jpg"
+                  alt="Nadica, founder of Nadeks"
+                  class="sg-tm-avatar"
+                  loading="lazy"
+                  width="80"
+                  height="80"
+                />
+                <blockquote class="sg-tm-mini">
+                  <p>
+                    "What surprised me is how smooth it is. No pressure, no
+                    overwhelm, just a clear next step every time. I've already
+                    started diversifying my business, and for the first time the
+                    growth feels manageable instead of chaotic."
+                  </p>
+                  <footer class="sg-tm-attr">
+                    Nadica, <span>Founder, Nadeks</span>
+                  </footer>
+                </blockquote>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ CLOSING CTA ============ -->
+      <section class="sg-section sg-section-dark text-center">
+        <div class="container">
+          <h2 class="sg-section-title sg-text-light">
+            Not sure which package fits?
+          </h2>
+          <p class="sg-section-text sg-text-muted">
+            Let's talk. A free 30-minute call is all it takes to find out.
+          </p>
+          <a href="schedule.html" class="btn btn-sg-accent btn-lg mt-2"
+            >Book a free call</a
+          >
+        </div>
+      </section>
+    </main>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="sg-footer text-center">
+      <div class="container">
+        <a class="sg-footer-brand" href="index.html"
+          >Smooth <span>Goals</span></a
+        >
+        <p class="sg-footer-copy">
+          &copy; 2026 Smooth Goals &middot; Michael K. &middot; All rights
+          reserved.
         </p>
 
-        <dl class="row dl-column">
-          <div class="col-sm-4">
-            <dt>Financial Abundance or Career</dt>
-            <dd>
-              Picture a reality where every ambition is within reach at your
-              command. Envision basking in the wealth of a five-figure income
-              effortlessly streaming each month, enabling you to fulfill the
-              desires of your loved ones without hesitation. Imagine securing
-              that dream job or shattering any personal barrier that dares stand
-              in your way.
-            </dd>
-          </div>
-          <div class="col-sm-4">
-            <dt>Love & Relationships</dt>
-            <dd>
-              What if you could unequivocally trust in your ability to manifest
-              every life goal, sculpting the existence you've longed for with
-              unwavering certainty? Envision knowing precisely how to navigate
-              the path to your heart's desires, unfurling a future brimming with
-              love and fulfillment.
-            </dd>
-          </div>
-          <div class="col-sm-4">
-            <dt>Fitness & Health</dt>
-            <dd>
-              You may choose to achieve your health and wellness goals. Get a
-              perfect body. Accomplish great sports results. Can you grasp the
-              magnitude of such potential? Prepare to embark on a journey where
-              the impossible becomes your reality.
-            </dd>
-          </div>
-        </dl>
-      </div>
-    </main>
-    <!--Footer-->
-    <footer class="text-center bg-dark p-5">
-      <div class="container text-white">
-        <p>&copy; Copyright 2024. All Rights Reserved.</p>
-        <div class="mb-2">
-          <a href="mailto:smoothgoals@gmail.com" class="text-white">
-            smoothgoals@gmail.com
-          </a>
-        </div>
-        <div>
+        <div class="sg-socials">
           <a
             href="https://www.facebook.com/profile.php?id=61557992752582"
             target="_blank"
-            class="d-inline-block me-3"
+            rel="noopener noreferrer"
+            aria-label="Visit Smooth Goals on Facebook"
           >
-            <img
-              src="images/Facebook_Logo_Primary.png"
-              alt="Blue Facebook logo leading to Smooth Goals page on Facebook"
-              class="img-fluid"
-              style="width: 40px"
-            />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="36"
+              height="36"
+              viewBox="0 0 40 40"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <rect width="40" height="40" rx="8" fill="#1877F2" />
+              <path
+                d="M27 20h-4v14h-6V20h-3v-5h3v-3c0-4 2-6 6-6h4v5h-3c-1 0-1 .5-1 1v3h4l-1 5z"
+                fill="#fff"
+              />
+            </svg>
           </a>
           <a
             href="https://www.instagram.com/smooth_goals/"
             target="_blank"
-            class="d-inline-block"
+            rel="noopener noreferrer"
+            aria-label="Visit Smooth Goals on Instagram"
           >
-            <img
-              src="images/Instagram_Glyph_Gradient.png"
-              alt="Colorful Instagram logo leading to Smooth Goals page on Instagram"
-              class="img-fluid"
-              style="width: 40px"
-            />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="36"
+              height="36"
+              viewBox="0 0 40 40"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <defs>
+                <radialGradient id="ig" cx="30%" cy="107%" r="150%">
+                  <stop offset="0%" stop-color="#fdf497" />
+                  <stop offset="15%" stop-color="#fd5949" />
+                  <stop offset="44%" stop-color="#d6249f" />
+                  <stop offset="75%" stop-color="#285AEB" />
+                </radialGradient>
+              </defs>
+              <rect width="40" height="40" rx="8" fill="url(#ig)" />
+              <rect
+                x="10"
+                y="10"
+                width="20"
+                height="20"
+                rx="6"
+                fill="none"
+                stroke="#fff"
+                stroke-width="2"
+              />
+              <circle
+                cx="20"
+                cy="20"
+                r="5"
+                fill="none"
+                stroke="#fff"
+                stroke-width="2"
+              />
+              <circle cx="27" cy="13" r="1.5" fill="#fff" />
+            </svg>
+          </a>
+          <a
+            href="https://www.linkedin.com/company/smooth-goals"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Visit Smooth Goals on LinkedIn"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="36"
+              height="36"
+              viewBox="0 0 40 40"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <rect width="40" height="40" rx="8" fill="#0A66C2" />
+              <circle cx="12" cy="12" r="2.3" fill="#fff" />
+              <rect x="10" y="16.5" width="4" height="13.5" fill="#fff" />
+              <path
+                d="M18 16.5h3.8v1.9h.05c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.78 2.5 4.78 5.76V30h-4v-5.9c0-1.4-.03-3.22-2-3.22-2 0-2.3 1.53-2.3 3.11V30h-4V16.5z"
+                fill="#fff"
+              />
+            </svg>
           </a>
         </div>
       </div>
     </footer>
 
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-
+    <!-- Bootstrap JS (bundle includes Popper) -->
     <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
-      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
-      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
-      crossorigin="anonymous"
-    ></script>
-    <script src="scripts/script.js"></script>
   </body>
 </html>

@@ -1,0 +1,17 @@
+<svg viewBox="0 0 760 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="ae-title ae-desc" width="100%" preserveAspectRatio="xMidYMid meet">
+  <title id="ae-title">The Active Energy equation</title>
+  <desc id="ae-desc">Active energy equals total energy minus the energy spent on inner conflict.</desc>
+  <rect x="10" y="10" width="740" height="320" rx="18" fill="#fefdfb" stroke="#e7ddd0" stroke-width="1.5"/>
+  <text x="380" y="84" text-anchor="middle" font-family="Montserrat, 'Segoe UI', sans-serif" font-size="13" font-weight="700" letter-spacing="2.5" fill="#8a7f6f">TOTAL ENERGY</text>
+  <line x1="90" y1="100" x2="670" y2="100" stroke="#cbbda9" stroke-width="1.5"/>
+  <line x1="90" y1="100" x2="90" y2="122" stroke="#cbbda9" stroke-width="1.5"/>
+  <line x1="670" y1="100" x2="670" y2="122" stroke="#cbbda9" stroke-width="1.5"/>
+  <rect x="90" y="128" width="360" height="54" rx="7" fill="#c9a227"/>
+  <rect x="454" y="128" width="216" height="54" rx="7" fill="#ddd2c2" stroke="#cbbda9" stroke-width="1"/>
+  <text x="270" y="214" text-anchor="middle" font-family="Montserrat, 'Segoe UI', sans-serif" font-size="18" font-weight="700" fill="#a8851a">Active energy</text>
+  <text x="270" y="236" text-anchor="middle" font-family="Montserrat, 'Segoe UI', sans-serif" font-size="13" fill="#8a7f6f">what actually moves you</text>
+  <text x="562" y="214" text-anchor="middle" font-family="Montserrat, 'Segoe UI', sans-serif" font-size="16" font-weight="700" fill="#6f655a">Inner conflict</text>
+  <text x="562" y="236" text-anchor="middle" font-family="Montserrat, 'Segoe UI', sans-serif" font-size="12" fill="#8a7f6f">competing roles &amp; beliefs</text>
+  <text x="380" y="298" text-anchor="middle" font-family="Montserrat, 'Segoe UI', sans-serif" font-size="18" font-weight="600" fill="#1c1a18"><tspan fill="#a8851a" font-weight="700">Active energy</tspan> = Total energy − <tspan fill="#6f655a">inner conflict</tspan></text>
+  <text x="730" y="320" text-anchor="end" font-family="Montserrat, 'Segoe UI', sans-serif" font-size="11" fill="#b8ad9d">smoothgoals.com</text>
+</svg>

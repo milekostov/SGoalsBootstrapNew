@@ -1,0 +1,14 @@
+PHPMailer — Manual Installation
+================================
+
+1. Go to: https://github.com/PHPMailer/PHPMailer/releases
+2. Download the latest release ZIP (e.g. v6.9.3).
+3. Extract the ZIP. Inside you'll find a src/ folder containing:
+     - PHPMailer.php
+     - SMTP.php
+     - Exception.php
+4. Copy those 3 files into THIS directory's src/ folder:
+     vendor/phpmailer/src/PHPMailer.php
+     vendor/phpmailer/src/SMTP.php
+     vendor/phpmailer/src/Exception.php
+5. Done. The mailer.php helper requires these files automatically.

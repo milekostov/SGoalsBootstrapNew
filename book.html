@@ -1,6 +1,6 @@
-<!--Mile Kostov, 16 September 2024-->
+<!--Smooth Goals — Books | Redesigned 2026 | Black/Red/Gold-->
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <!-- Essential Meta Tags -->
@@ -14,14 +14,11 @@
       name="keywords"
       content="success books, goal achievement books, self improvement, motivation, productivity, goal setting, Smooth Goals books, personal development"
     />
-    <meta name="author" content="Smooth Goals" />
+    <meta name="author" content="Michael K." />
 
     <!-- Open Graph Meta Tags -->
     <meta property="og:type" content="website" />
-    <meta
-      property="og:url"
-      content="https://smoothgoals.com/success-books.html"
-    />
+    <meta property="og:url" content="https://smoothgoals.com/book.html" />
     <meta property="og:title" content="Success Books | Smooth Goals" />
     <meta
       property="og:description"
@@ -63,6 +60,20 @@
     />
     <link rel="icon" sizes="192x192" href="images/android-chrome-192x192.png" />
 
+    <!-- Canonical -->
+    <link rel="canonical" href="https://smoothgoals.com/book.html" />
+
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Google Fonts - Montserrat -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
     <!-- Bootstrap CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
@@ -75,254 +86,281 @@
     <link rel="stylesheet" href="css/styles.css" />
 
     <!-- Page Title -->
-    <title>Success Books | Smooth Goals</title>
+    <title>Goal-Setting Books for Entrepreneurs | Smooth Goals</title>
 
-    <!-- jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <!-- Structured Data for SEO (JSON-LD) -->
+    <!-- Structured Data (JSON-LD) -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "Organization",
         "name": "Smooth Goals",
         "url": "https://smoothgoals.com",
-        "logo": "https://smoothgoals.com/images/favicon-192x192.png",
+        "logo": "https://smoothgoals.com/images/logoMK.png",
         "sameAs": [
-          "https://www.facebook.com/smoothgoals",
-          "https://www.instagram.com/smoothgoals",
-          "https://www.linkedin.com/company/smooth-goals",
-          "https://www.youtube.com/@smoothgoals"
+          "https://www.facebook.com/profile.php?id=61557992752582",
+          "https://www.instagram.com/smooth_goals/",
+          "https://www.linkedin.com/company/smooth-goals"
         ],
         "founder": {
           "@type": "Person",
-          "name": "Mile Kostov",
-          "jobTitle": "Founder & Goal Achievement Coach"
+          "name": "Michael K.",
+          "jobTitle": "Entrepreneur & Goal Achievement Coach"
         },
-        "description": "Smooth Goals is a goal management and personal development platform offering coaching, free resources, and success tools to help people set, plan, and achieve their goals efficiently.",
+        "description": "Smooth Goals is a goal management and personal development platform offering coaching, free resources, and success tools to help people set, plan, and achieve their goals using the Smooth Goals System.",
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "Skopje",
           "addressCountry": "North Macedonia"
-        },
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "contactType": "Customer Support",
-          "email": "info@smoothgoals.com",
-          "url": "https://smoothgoals.com/contact.html"
         }
       }
     </script>
   </head>
 
   <body>
-    <!--Bootstrap nav bar-->
-    <nav class="navbar navbar-expand-sm navbar-dark sticky-top bg-dark">
-      <a class="navbar-brand" href="index.html">Road to Success</a>
+    <!-- ============ NAVIGATION ============ -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top sg-nav">
+      <div class="container">
+        <a class="navbar-brand sg-brand" href="index.html"
+          >Smooth <span>Goals</span></a
+        >
 
-      <!--Hamburger menu icon-->
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarResponsive"
-        aria-controls="navbarResponsive"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarMain"
+          aria-controls="navbarMain"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-      <!--Navbar links-->
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="book.html">Success Books</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="about.html">Packages</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="free.html">Free Stuff</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="indexWheel.html">Wheel of Life</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact</a>
-          </li>
-        </ul>
+        <div class="collapse navbar-collapse" id="navbarMain">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="book.html"
+                >Books</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">Coaching</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="free.html">Free Course</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="/guides/">Guides</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item ms-lg-3">
+              <a
+                class="btn btn-sg-accent btn-sm px-3"
+                href="schedule.html"
+                >Book a Free Call</a
+              >
+            </li>
+          </ul>
+        </div>
       </div>
     </nav>
 
-    <!-- Header and Hero Image -->
-    <header class="bg-dark text-white text-center py-5 hero2">
-      <div class="container welcome2">
-        <img
-          src="images/logoMK.png"
-          alt="Logo of Smooth Goals, the best goal achievement system on the Planet"
-          class="float-start me-3 img-fluid"
-        />
-
-        <h1>Goals Manual</h1>
-        <h2>Your step by step guide to Success!</h2>
+    <!-- ============ PAGE HERO ============ -->
+    <header class="sg-page-hero">
+      <div
+        class="sg-page-hero-bg"
+        style="background-image: url(&quot;images/hero-2.jpg&quot;)"
+        aria-hidden="true"
+      ></div>
+      <div class="sg-page-hero-scrim"></div>
+      <div class="container sg-page-hero-content text-center">
+        <p class="sg-eyebrow" style="animation: none; opacity: 1">The books</p>
+        <h1 class="sg-page-hero-title">Your step-by-step guide to success</h1>
+        <p class="sg-page-hero-sub">
+          Two books. One system. Everything you need to set, plan, and achieve
+          your goals.
+        </p>
       </div>
     </header>
 
-    <!--Main content area-->
-    <main class="container mt-5">
-      <div class="row main-content text-center">
-        <div class="col-lg-12 mb-4">
-          <h1 class="display-2 custom-heading">Your SUCCESS Blueprint</h1>
+    <!-- ============ BOOKS SECTION ============ -->
+    <main>
+      <section id="books" class="sg-section sg-section-cream">
+        <div class="container">
+          <p class="sg-label text-center">The books</p>
+          <h2 class="sg-section-title text-center">The system, on paper.</h2>
+          <p class="sg-section-text text-center" style="max-width: 620px">
+            You don’t have a motivation problem. You have a system problem.
+            These two books hand you the fix — one to get moving this week, one
+            to master it for good. Both are the Smooth Goals System in print,
+            written under the pen name Michael K.
+          </p>
+
+          <div class="row justify-content-center g-4 mt-4">
+            <!-- Book 1: 7-Day Sprint -->
+            <div class="col-lg-6">
+              <article class="sg-book sg-book-standard sg-book-detail h-100">
+                <div class="sg-book-accent sg-accent-red"></div>
+                <div class="sg-book-cover-wrap">
+                  <a
+                    href="https://a.co/d/eqemotG"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      src="images/cover-sprint.jpg"
+                      alt="7-Day Goal Sprint book cover"
+                      class="sg-book-cover"
+                      width="293"
+                      height="466"
+                      loading="lazy"
+                    />
+                  </a>
+                </div>
+                <div
+                  class="sg-book-body"
+                  style="align-items: flex-start; text-align: left"
+                >
+                  <span class="sg-badge sg-badge-free">Start here</span>
+                  <h3 class="sg-book-title">7-Day Goal Sprint</h3>
+                  <p class="sg-book-subtitle">
+                    From stuck to in motion — in one week.
+                  </p>
+                  <p class="sg-book-long">
+                    Most goals die in the gap between deciding and doing. The
+                    Sprint closes that gap in seven days, 30 minutes at a time.
+                    By the end of the week you won’t just have a goal written
+                    down — you’ll be moving on it, with a system underneath you
+                    instead of willpower you have to summon every morning.
+                  </p>
+                  <p class="sg-book-list-label">What you’ll do inside:</p>
+                  <ul class="sg-book-features">
+                    <li>
+                      Anchor your goal to what you actually value, using the
+                      Wheel of Life — so it pulls you forward instead of
+                      guilt-tripping you
+                    </li>
+                    <li>
+                      Shape one SMART goal sharp enough to act on tomorrow, not
+                      someday
+                    </li>
+                    <li>
+                      Dismantle the limiting beliefs quietly running the show,
+                      with the History Change Method
+                    </li>
+                    <li>Stack small daily wins into real momentum</li>
+                    <li>
+                      Lock it in with a personal pledge that outlasts the
+                      motivation high
+                    </li>
+                  </ul>
+                  <p class="sg-book-closing">
+                    It’s the shortest distance between "I should" and "I’m doing
+                    it."
+                  </p>
+                  <a
+                    href="https://a.co/d/eqemotG"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn btn-sg-accent mt-auto"
+                    >Start the Sprint — $0.99 on Amazon</a
+                  >
+                </div>
+              </article>
+            </div>
+
+            <!-- Book 2: Goal Mastery (flagship) -->
+            <div class="col-lg-6">
+              <article class="sg-book sg-book-flagship sg-book-detail h-100">
+                <div class="sg-book-accent sg-accent-gold"></div>
+                <div class="sg-book-cover-wrap">
+                  <a
+                    href="https://a.co/d/1OPdV5N"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      src="images/cover-mastery.jpg"
+                      alt="Goal Mastery book cover"
+                      class="sg-book-cover"
+                      width="326"
+                      height="522"
+                      loading="lazy"
+                    />
+                  </a>
+                </div>
+                <div
+                  class="sg-book-body"
+                  style="align-items: flex-start; text-align: left"
+                >
+                  <span class="sg-badge sg-badge-flag">★ Flagship</span>
+                  <div class="sg-stars" aria-label="Rated 5 out of 5 stars">
+                    ★★★★★
+                  </div>
+                  <h3 class="sg-book-title">Goal Mastery</h3>
+                  <p class="sg-book-subtitle">
+                    The Step-by-Step Blueprint to Achieving Success
+                  </p>
+                  <p class="sg-book-long">
+                    If the Sprint gets you moving, Goal Mastery makes it
+                    permanent. This is the complete Smooth Goals System — four
+                    decades of trial, error, and hard-won pattern-spotting,
+                    distilled into a blueprint you can run for the rest of your
+                    life. No hype, no hustle theatre. Just the architecture
+                    behind people who reliably finish what they start.
+                  </p>
+                  <p class="sg-book-list-label">What it gives you:</p>
+                  <ul class="sg-book-features">
+                    <li>
+                      A repeatable system for setting goals that excite you
+                      instead of exhausting you
+                    </li>
+                    <li>
+                      The structure that makes follow-through automatic — so
+                      progress doesn’t depend on a good mood
+                    </li>
+                    <li>
+                      A way to treat setbacks as data, not verdicts, and keep
+                      moving
+                    </li>
+                    <li>
+                      A deeper definition of wealth, and how to build toward it
+                      on purpose
+                    </li>
+                  </ul>
+                  <p class="sg-book-closing">
+                    Stop white-knuckling your goals. Start running a system that
+                    does the heavy lifting for you.
+                  </p>
+                  <a
+                    href="https://a.co/d/1OPdV5N"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn btn-sg-accent mt-auto"
+                    >Read Goal Mastery on Amazon</a
+                  >
+                </div>
+              </article>
+            </div>
+          </div>
         </div>
+      </section>
 
-        <div class="col-lg-6">
-          <div class="text-center">
-            <a href="https://a.co/d/1OPdV5N"
-              ><img
-                src="images/FrontCover.jpg"
-                alt="Goals Manual Cover"
-                class="img-fluid book-cover"
-            /></a>
-          </div>
-          <div class="text-start pt-3">
-            <p>
-              In a world full of surprises and challenges, make sure you're on
-              the winning side. Discover the ultimate guide to achieving a state
-              of power where no external force can prevent you from succeeding.
-            </p>
-
-            <p>
-              Goal Mastery: Step-by-step Blueprint to Achieving Success is your
-              ultimate guide to navigating life's challenges and achieving your
-              dreams, even in turbulent times.
-            </p>
-
-            <p>
-              In this practical guide, Michael K. shares insights gained over 40
-              years of study and trial and error, offering a straightforward
-              roadmap to turn your dreams into reality following easy steps.
-              Whether you're a young dreamer or someone with unfulfilled
-              aspirations, this book provides the tools you need to succeed.
-            </p>
-
-            <p>
-              Learn how to set clear goals and make them happen. Overcome
-              obstacles with ease. Say goodbye to feeling lost and hello to a
-              future where you know what you want and how to get it.
-            </p>
-            <p>
-              Secrets to unlocking your potential, maximizing your earning
-              capacity, and redefining wealth beyond material possessions.
-            </p>
-            <p>
-              Through easy-to-follow actionable strategies and real-world
-              examples, you'll learn how to:
-            </p>
-            <ul>
-              <li>Set clear and achievable goals</li>
-              <li>Overcome setbacks and failures</li>
-              <li>Cultivate resilience and mental clarity</li>
-              <li>Invest in yourself for long-term success</li>
-            </ul>
-            <p>
-              You'll transform your life, seize control of your destiny, and
-              unlock a future full of limitless possibilities. Stop dreaming.
-              <strong
-                ><a
-                  href="https://a.co/d/1OPdV5N"
-                  style="
-                    text-decoration: none;
-                    color: #e74c3c;
-                    font-size: 1.1em;
-                  "
-                  >Take action today and make your goals a reality!</a
-                ></strong
-              >
-            </p>
-          </div>
-        </div>
-        <!--2nd book-->
-        <div class="col-lg-6">
-          <div class="text-center">
-            <a href="https://a.co/d/1OPdV5N"
-              ><img
-                src="images/7Days.jpg"
-                alt="7 Days to Success cover"
-                class="img-fluid book-cover"
-            /></a>
-          </div>
-          <div class="text-start pt-3">
-            <p>
-              Feeling stuck? Overwhelmed by your goals? This concise, actionable
-              guide provides the structure and momentum you need in just one
-              week.
-            </p>
-
-            <p>
-              7-Day Goal Sprint is a practical and motivational mini-course
-              designed for entrepreneurs, dreamers, and doers. Whether you’re
-              launching a business, starting a creative project, or chasing a
-              personal breakthrough, this booklet gives you the mindset,
-              clarity, and tools to start strong.
-            </p>
-            <p>Inside, you’ll learn how to:</p>
-            <ul>
-              <li>Align your goals with your core values and purpose</li>
-              <li>Identify your true priorities using the Wheel of Life</li>
-              <li>Craft a SMART goal that’s inspiring and achievable</li>
-              <li>
-                Break free from limiting beliefs with the powerful History
-                Change Method
-              </li>
-              <li>Build momentum through focused, daily actions</li>
-              <li>Commit to your vision with a personal pledge that sticks</li>
-              <li>And more — in just 30 minutes a day</li>
-            </ul>
-            <p>
-              This is not just goal-setting. It’s mindset training and
-              confidence-building. Personal evolution.
-            </p>
-
-            <p>
-              By the end of this 7-day sprint, you’ll feel clear, committed, and
-              in motion — with a solid foundation and practical tools to go the
-              distance.
-            </p>
-
-            <p>
-              If you’re ready to stop waiting and start doing, this guide is
-              your launchpad.
-            </p>
-            <p>
-              <strong
-                ><a
-                  href="https://a.co/d/1OPdV5N"
-                  style="
-                    text-decoration: none;
-                    color: #e74c3c;
-                    font-size: 1.1em;
-                  "
-                  >Take action now!</a
-                ></strong
-              >
-            </p>
-          </div>
-        </div>
-        <!-- Video Section -->
-        <div class="container mt-5 mb-1 text-center">
-          <h2 class="trailer">Watch the Book Trailer</h2>
+      <!-- Video Section (kept for separate pass) -->
+      <section class="sg-section sg-section-dark text-center">
+        <div class="container">
+          <h2 class="sg-section-title sg-text-light">Watch the Book Trailer</h2>
           <button
             type="button"
-            class="btn btn-danger btn-lg"
+            class="btn btn-sg-accent btn-lg mt-2"
             data-bs-toggle="modal"
             data-bs-target="#videoModal"
           >
-            Success Video
+            Play Trailer
           </button>
-          <!-- Video Modal -->
           <div
             class="modal fade"
             id="videoModal"
@@ -331,12 +369,17 @@
             aria-hidden="true"
           >
             <div class="modal-dialog modal-lg">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="videoModalLabel">Book Trailer</h5>
+              <div
+                class="modal-content"
+                style="background: #1c1a18; border: 1px solid #333"
+              >
+                <div class="modal-header" style="border-bottom: 1px solid #333">
+                  <h5 class="modal-title sg-text-light" id="videoModalLabel">
+                    Book Trailer
+                  </h5>
                   <button
                     type="button"
-                    class="btn-close"
+                    class="btn-close btn-close-white"
                     data-bs-dismiss="modal"
                     aria-label="Close"
                   ></button>
@@ -351,74 +394,118 @@
             </div>
           </div>
         </div>
-      </div>
-
-      <div class="container">
-        <div class="row justify-content-center mt-1 mb-5">
-          <div class="col-12 col-md-6 col-lg-3 text-center">
-            <a href="https://a.co/d/1OPdV5N" class="btn btn-danger btn-lg w-100"
-              >Goals Manual 5.99$</a
-            >
-          </div>
-          <div class="col-12 col-md-6 col-lg-3 text-center">
-            <a href="https://a.co/d/eqemotG" class="btn btn-danger btn-lg w-100"
-              >7 Days 2 Success 0.99$</a
-            >
-          </div>
-        </div>
-      </div>
+      </section>
     </main>
 
-    <!--Footer-->
-    <footer class="text-center bg-dark p-5">
-      <div class="container text-white">
-        <p>&copy; Copyright 2024. All Rights Reserved.</p>
-        <div class="mb-2">
-          <a href="mailto:smoothgoals@gmail.com" class="text-white">
-            smoothgoals@gmail.com
-          </a>
-        </div>
-        <div>
+    <!-- ============ FOOTER ============ -->
+    <footer class="sg-footer text-center">
+      <div class="container">
+        <a class="sg-footer-brand" href="index.html"
+          >Smooth <span>Goals</span></a
+        >
+        <p class="sg-footer-copy">
+          &copy; 2026 Smooth Goals &middot; Michael K. &middot; All rights
+          reserved.
+        </p>
+
+        <div class="sg-socials">
           <a
             href="https://www.facebook.com/profile.php?id=61557992752582"
             target="_blank"
-            class="d-inline-block me-3"
+            rel="noopener noreferrer"
+            aria-label="Visit Smooth Goals on Facebook"
           >
-            <img
-              src="images/Facebook_Logo_Primary.png"
-              alt="Blue Facebook logo leading to Smooth Goals page on Facebook"
-              class="img-fluid"
-              style="width: 40px"
-            />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="36"
+              height="36"
+              viewBox="0 0 40 40"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <rect width="40" height="40" rx="8" fill="#1877F2" />
+              <path
+                d="M27 20h-4v14h-6V20h-3v-5h3v-3c0-4 2-6 6-6h4v5h-3c-1 0-1 .5-1 1v3h4l-1 5z"
+                fill="#fff"
+              />
+            </svg>
           </a>
           <a
             href="https://www.instagram.com/smooth_goals/"
             target="_blank"
-            class="d-inline-block"
+            rel="noopener noreferrer"
+            aria-label="Visit Smooth Goals on Instagram"
           >
-            <img
-              src="images/Instagram_Glyph_Gradient.png"
-              alt="Colorful Instagram logo leading to Smooth Goals page on Instagram"
-              class="img-fluid"
-              style="width: 40px"
-            />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="36"
+              height="36"
+              viewBox="0 0 40 40"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <defs>
+                <radialGradient id="ig" cx="30%" cy="107%" r="150%">
+                  <stop offset="0%" stop-color="#fdf497" />
+                  <stop offset="15%" stop-color="#fd5949" />
+                  <stop offset="44%" stop-color="#d6249f" />
+                  <stop offset="75%" stop-color="#285AEB" />
+                </radialGradient>
+              </defs>
+              <rect width="40" height="40" rx="8" fill="url(#ig)" />
+              <rect
+                x="10"
+                y="10"
+                width="20"
+                height="20"
+                rx="6"
+                fill="none"
+                stroke="#fff"
+                stroke-width="2"
+              />
+              <circle
+                cx="20"
+                cy="20"
+                r="5"
+                fill="none"
+                stroke="#fff"
+                stroke-width="2"
+              />
+              <circle cx="27" cy="13" r="1.5" fill="#fff" />
+            </svg>
+          </a>
+          <a
+            href="https://www.linkedin.com/company/smooth-goals"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Visit Smooth Goals on LinkedIn"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="36"
+              height="36"
+              viewBox="0 0 40 40"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <rect width="40" height="40" rx="8" fill="#0A66C2" />
+              <circle cx="12" cy="12" r="2.3" fill="#fff" />
+              <rect x="10" y="16.5" width="4" height="13.5" fill="#fff" />
+              <path
+                d="M18 16.5h3.8v1.9h.05c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.78 2.5 4.78 5.76V30h-4v-5.9c0-1.4-.03-3.22-2-3.22-2 0-2.3 1.53-2.3 3.11V30h-4V16.5z"
+                fill="#fff"
+              />
+            </svg>
           </a>
         </div>
       </div>
     </footer>
 
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-
+    <!-- Bootstrap JS (bundle includes Popper) -->
     <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
-      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
-      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
-      crossorigin="anonymous"
-    ></script>
-    <script src="scripts/script.js"></script>
   </body>
 </html>
